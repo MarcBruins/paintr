@@ -30,7 +30,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The team owner can invite additional painters and assign them the estimator role, and those estimators can only see quotes belonging to their own organization
   4. Data written by one organization is invisible to users of any other organization — row-level isolation is enforced at the database level
   5. The application deploys successfully to a production URL and CI runs on every commit
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project scaffold: Next.js 16, Tailwind v4, Biome, Drizzle ORM, Supabase connection, quotes schema with RLS
+- [ ] 01-02-PLAN.md — Better Auth email/password, sign-in/sign-up UI, proxy route guard, session persistence
+- [ ] 01-03-PLAN.md — Organization plugin, roles (owner/estimator), invitation flow, email sending, RLS verification
+- [ ] 01-04-PLAN.md — GitHub Actions CI, Vercel production deploy, end-to-end verification checkpoint
 
 ### Phase 2: Voice Input and LLM Parsing
 **Goal**: A painter can speak or type a job description on their phone and receive a validated, structured JSON quote with rooms, tasks, measurements, and risk flags — ready for review
@@ -85,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/4 | Planning complete | - |
 | 2. Voice Input and LLM Parsing | 0/TBD | Not started | - |
 | 3. Quote Review, Pricing, and Mobile UX | 0/TBD | Not started | - |
 | 4. PDF Generation, Delivery, and Customer Management | 0/TBD | Not started | - |
