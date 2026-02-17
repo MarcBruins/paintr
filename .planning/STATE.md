@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-17)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 2 of 4 in current phase
-Status: Executing — Plans 01-02 complete, Plans 03-04 pending
-Last activity: 2026-02-17 — Plan 02 executed (Better Auth configuration + auth UI)
+Plan: 3 of 4 in current phase
+Status: Executing — Plans 01-03 complete, Plan 04 pending
+Last activity: 2026-02-17 — Plan 03 executed (Organization plugin, invitation emails, org UI)
 
-Progress: [███░░░░░░░] 20%
+Progress: [████░░░░░░] 30%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 11.5 min
-- Total execution time: 23 min
+- Total plans completed: 3
+- Average duration: 12.7 min
+- Total execution time: 38 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 2/4 | 23 min | 11.5 min |
+| 01-foundation | 3/4 | 38 min | 12.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 14 min, 9 min
-- Trend: Faster
+- Last 5 plans: 14 min, 9 min, 15 min
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -56,10 +56,14 @@ Recent decisions affecting current work:
 - [01-02]: headers() must be awaited in Next.js 16 server components — sync shim removed
 - [01-02]: nextCookies() must be last plugin in Better Auth plugins array for session cookies to work
 - [01-02]: Database migration deferred — .env.local has placeholder credentials; user must fill in real values and run pnpm db:migrate
+- [01-03]: Custom roles (owner/estimator) via createAccessControl — built-in inviteMember type requires `as any` cast; runtime accepts custom roles correctly
+- [01-03]: proxy.ts must allow /accept-invitation routes — page handles its own auth redirect to preserve the redirect query param
+- [01-03]: Migration deferred again — DATABASE_URL_DIRECT still placeholder; both 0000 and 0001 migrations ready to apply
 
 ### Pending Todos
 
-- User must configure .env.local with real Supabase credentials and run pnpm db:migrate before Plan 03
+- User must configure .env.local with real Supabase + Resend credentials and run pnpm db:migrate before Plan 04
+- User must enable RLS on quotes table in Supabase Dashboard after migration
 
 ### Blockers/Concerns
 
@@ -70,5 +74,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Plan 01-02 complete — Better Auth configured, auth schema + migration SQL generated, sign-in/sign-up pages and protected layout created
+Stopped at: Plan 01-03 complete — Organization plugin configured, Resend email utility, org/invitation UI pages created, dashboard updated with org context
 Resume file: None
