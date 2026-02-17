@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-17)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 3 of 4 in current phase
-Status: Executing — Plans 01-03 complete, Plan 04 pending
-Last activity: 2026-02-17 — Plan 03 executed (Organization plugin, invitation emails, org UI)
+Plan: 4 of 4 in current phase
+Status: Executing — Plans 01-04 in progress — CI committed, Vercel deployment blocked by human-action auth gate
+Last activity: 2026-02-17 — Plan 04 executing (CI pipeline committed, Vercel deployment pending user auth)
 
-Progress: [████░░░░░░] 30%
+Progress: [████░░░░░░] 35%
 
 ## Performance Metrics
 
@@ -59,11 +59,17 @@ Recent decisions affecting current work:
 - [01-03]: Custom roles (owner/estimator) via createAccessControl — built-in inviteMember type requires `as any` cast; runtime accepts custom roles correctly
 - [01-03]: proxy.ts must allow /accept-invitation routes — page handles its own auth redirect to preserve the redirect query param
 - [01-03]: Migration deferred again — DATABASE_URL_DIRECT still placeholder; both 0000 and 0001 migrations ready to apply
+- [Phase 01-foundation]: Vercel deployment requires human action — Vercel CLI needs interactive browser authentication that cannot be automated; user must run vercel login before deployment
+- [Phase 01-foundation]: No vercel.json needed — Next.js 16 is auto-detected by Vercel framework detection without custom config
 
 ### Pending Todos
 
-- User must configure .env.local with real Supabase + Resend credentials and run pnpm db:migrate before Plan 04
-- User must enable RLS on quotes table in Supabase Dashboard after migration
+- User must create GitHub repository and run: git remote add origin https://github.com/YOUR_USERNAME/paintr.git && git push -u origin main
+- User must install and authenticate Vercel CLI: npm install -g vercel && vercel login && vercel --yes
+- User must add environment variables to Vercel (DATABASE_URL, DATABASE_URL_DIRECT, BETTER_AUTH_SECRET, BETTER_AUTH_URL, NEXT_PUBLIC_APP_URL, RESEND_API_KEY, EMAIL_FROM)
+- User must run vercel --prod for production deployment
+- User must add same env vars as GitHub repository secrets for CI pipeline
+- User must verify all 6 AUTH requirements on production URL (Task 2 checkpoint)
 
 ### Blockers/Concerns
 
@@ -74,5 +80,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Plan 01-03 complete — Organization plugin configured, Resend email utility, org/invitation UI pages created, dashboard updated with org context
+Stopped at: Plan 01-04 partial — CI workflow committed (6590e7a), checkpoint reached at Vercel deployment (human-action auth gate: Vercel CLI auth + git remote required)
 Resume file: None
