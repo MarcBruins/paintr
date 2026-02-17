@@ -2,7 +2,9 @@ import { type NextRequest, NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
   const sessionCookie = request.cookies.get("better-auth.session_token");
-  const isAuthRoute = request.nextUrl.pathname.startsWith("/sign-");
+  const isAuthRoute =
+    request.nextUrl.pathname.startsWith("/sign-") ||
+    request.nextUrl.pathname.startsWith("/accept-invitation");
   const isApiRoute = request.nextUrl.pathname.startsWith("/api/");
   const isRootRoute = request.nextUrl.pathname === "/";
 

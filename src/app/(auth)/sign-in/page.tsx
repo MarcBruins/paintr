@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 
 export default function SignInPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = searchParams.get("redirect") ?? "/dashboard";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -22,7 +24,7 @@ export default function SignInPage() {
       if (result.error) {
         setError(result.error.message ?? "Invalid email or password.");
       } else {
-        router.push("/dashboard");
+        router.push(redirectTo);
       }
     } catch {
       setError("An unexpected error occurred. Please try again.");
