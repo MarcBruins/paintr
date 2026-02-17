@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-17)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 0 of 4 in current phase
-Status: Planning complete — ready to execute
-Last activity: 2026-02-17 — Phase 1 planned (4 plans, 4 waves), verified by plan checker
+Plan: 1 of 4 in current phase
+Status: Executing — Plan 01 complete, Plans 02-04 pending
+Last activity: 2026-02-17 — Plan 01 executed (Next.js scaffold + Drizzle schema)
 
-Progress: [█░░░░░░░░░] 5%
+Progress: [██░░░░░░░░] 10%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: —
+- Total plans completed: 1
+- Average duration: 14 min
+- Total execution time: 14 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1/4 | 14 min | 14 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: 14 min
 - Trend: —
 
 *Updated after each plan completion*
@@ -47,10 +47,14 @@ Recent decisions affecting current work:
 - [Roadmap]: Pricing in application code only — LLM outputs quantities, never dollar amounts
 - [Roadmap]: Better Auth (not Clerk) for GDPR compliance — user PII stays in own Postgres
 - [Roadmap]: Supabase Frankfurt for EU data residency + RLS tenant isolation
+- [01-01]: Biome 2.4.2 requires tailwindDirectives=true in CSS parser and files.includes for exclusions (not files.ignore)
+- [01-01]: Drizzle uses prepare:false with postgres.js — mandatory for Supabase Transaction pool mode
+- [01-01]: DATABASE_URL (port 6543 pooler) for runtime, DATABASE_URL_DIRECT (port 5432) for drizzle-kit migrations
+- [01-01]: RLS tenant isolation via pgPolicy with app.current_org_id session variable set in withOrgContext transaction
 
 ### Pending Todos
 
-None yet.
+- User must configure .env.local with real Supabase credentials before Plan 02 runs migrations
 
 ### Blockers/Concerns
 
@@ -61,5 +65,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Phase 1 planning complete — 4 plans created, verified, committed
+Stopped at: Plan 01-01 complete — Next.js 16 scaffolded, Drizzle ORM configured, schema defined
 Resume file: None
