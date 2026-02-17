@@ -122,53 +122,55 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VOICE-01 | — | Pending |
-| VOICE-02 | — | Pending |
-| VOICE-03 | — | Pending |
-| VOICE-04 | — | Pending |
-| VOICE-05 | — | Pending |
-| VOICE-06 | — | Pending |
-| VOICE-07 | — | Pending |
-| VOICE-08 | — | Pending |
-| QUOT-01 | — | Pending |
-| QUOT-02 | — | Pending |
-| QUOT-03 | — | Pending |
-| QUOT-04 | — | Pending |
-| QUOT-05 | — | Pending |
-| QUOT-06 | — | Pending |
-| PRICE-01 | — | Pending |
-| PRICE-02 | — | Pending |
-| PRICE-03 | — | Pending |
-| PRICE-04 | — | Pending |
-| PRICE-05 | — | Pending |
-| PRICE-06 | — | Pending |
-| PRICE-07 | — | Pending |
-| DELIV-01 | — | Pending |
-| DELIV-02 | — | Pending |
-| DELIV-03 | — | Pending |
-| CUST-01 | — | Pending |
-| CUST-02 | — | Pending |
-| CUST-03 | — | Pending |
-| AUTH-01 | — | Pending |
-| AUTH-02 | — | Pending |
-| AUTH-03 | — | Pending |
-| AUTH-04 | — | Pending |
-| AUTH-05 | — | Pending |
-| AUTH-06 | — | Pending |
-| INV-01 | — | Pending |
-| INV-02 | — | Pending |
-| INV-03 | — | Pending |
-| INV-04 | — | Pending |
-| INV-05 | — | Pending |
-| UX-01 | — | Pending |
-| UX-02 | — | Pending |
-| UX-03 | — | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Pending |
+| AUTH-06 | Phase 1 | Pending |
+| VOICE-01 | Phase 2 | Pending |
+| VOICE-02 | Phase 2 | Pending |
+| VOICE-03 | Phase 2 | Pending |
+| VOICE-04 | Phase 2 | Pending |
+| VOICE-05 | Phase 2 | Pending |
+| VOICE-06 | Phase 2 | Pending |
+| VOICE-07 | Phase 2 | Pending |
+| VOICE-08 | Phase 2 | Pending |
+| QUOT-01 | Phase 3 | Pending |
+| QUOT-02 | Phase 3 | Pending |
+| QUOT-03 | Phase 3 | Pending |
+| QUOT-04 | Phase 3 | Pending |
+| QUOT-05 | Phase 3 | Pending |
+| QUOT-06 | Phase 3 | Pending |
+| PRICE-01 | Phase 3 | Pending |
+| PRICE-02 | Phase 3 | Pending |
+| PRICE-03 | Phase 3 | Pending |
+| PRICE-04 | Phase 3 | Pending |
+| PRICE-05 | Phase 3 | Pending |
+| PRICE-06 | Phase 3 | Pending |
+| PRICE-07 | Phase 3 | Pending |
+| UX-01 | Phase 3 | Pending |
+| UX-02 | Phase 3 | Pending |
+| UX-03 | Phase 3 | Pending |
+| DELIV-01 | Phase 4 | Pending |
+| DELIV-02 | Phase 4 | Pending |
+| DELIV-03 | Phase 4 | Pending |
+| CUST-01 | Phase 4 | Pending |
+| CUST-02 | Phase 4 | Pending |
+| CUST-03 | Phase 4 | Pending |
+| INV-01 | Phase 5 | Pending |
+| INV-02 | Phase 5 | Pending |
+| INV-03 | Phase 5 | Pending |
+| INV-04 | Phase 5 | Pending |
+| INV-05 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 38 total
-- Mapped to phases: 0
-- Unmapped: 38 ⚠️
+- v1 requirements: 41 total
+- Mapped to phases: 41
+- Unmapped: 0 ✓
+
+*Note: The previous coverage count of 38 was a miscalculation. The actual count is 41 (8 VOICE + 6 QUOT + 7 PRICE + 3 DELIV + 3 CUST + 6 AUTH + 5 INV + 3 UX).*
 
 ---
 *Requirements defined: 2026-02-17*
-*Last updated: 2026-02-17 after initial definition*
+*Last updated: 2026-02-17 — traceability completed after roadmap creation*
