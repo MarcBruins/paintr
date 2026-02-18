@@ -6,6 +6,7 @@
       "**/*",
       "!node_modules",
       "!.next",
+      "!.vercel",
       "!src/lib/db/schema/auth.ts"
     ]
   },
